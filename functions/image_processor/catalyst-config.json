@@ -1,0 +1,14 @@
+{
+  "deployment": {
+    "name": "image_processor",
+    "stack": "node16",
+    "type": "advancedio",
+    "env_variables": {
+      "BROWSER_WS_ENDPOINT": "Your Catalyst SmartBrowz WS endpoint",
+      "CODELIB_SECRET_KEY": "CODELIB_FAKE_KEY"
+    }
+  },
+  "execution": {
+    "main": "index.js"
+  }
+}

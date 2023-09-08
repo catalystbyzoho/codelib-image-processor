@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <img id="mountingDivID" src />
+  </body>
+  <script>
+    const img = new Image();
+    img.src = 'data:image/jpeg;base64,imageSrc';
+    img.onload = function () {
+      const canvas = document.createElement('canvas'),
+        canvasContext = canvas.getContext('2d');
+
+      canvas.width = imageWidth;
+      canvas.height = imageHeight;
+      canvasContext.drawImage(img, 0, 0, canvas.width, canvas.height);
+      const dataurl = canvas.toDataURL('image/jpeg', imageCompressQuality);
+      document.getElementById('mountingDivID').src = dataurl;
+    };
+  </script>
+</html>

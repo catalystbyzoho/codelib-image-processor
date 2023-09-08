@@ -1,0 +1,29 @@
+{
+  "name" : "project-template",
+  "version" : "1.0.0",
+  "parameters" : { },
+  "components" : {
+    "Functions" : [ {
+      "type" : "function",
+      "name" : "image_processor",
+      "properties" : {
+        "stack" : "node16",
+        "code" : {
+          "path" : "functions/image_processor.zip"
+        },
+        "configuration" : {
+          "environment" : {
+            "variables" : {
+              "CODELIB_SECRET_KEY" : "CODELIB_FAKE_KEY",
+              "BROWSER_WS_ENDPOINT" : "Your Catalyst SmartBrowz WS endpoint"
+            }
+          },
+          "memory" : 256
+        },
+        "type" : "applogic",
+        "name" : "image_processor"
+      },
+      "dependsOn" : [ ]
+    } ]
+  }
+}
